@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primary-color: #79589f;
+  --secondary-color: #6e5baa;
+  --dark-color: #260040;
+  --light-color: #f4f4f4;
+  --shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  --text-color: #333;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}  
+
+  body {
+    font-family: "Lato", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+h1, h2 {
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+/* showcase */
+
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+  transition: transform;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-text {
+/*   animation: slideInFromLeft 1s ease-in;  */
+} /* easy-in - starts slowly and then speed up; easy-out - starts fast and then slows down*/
+
+.showcase-form {
+/*   animation: slideInFromRight 1s ease-in;  */
+  position: relative; 
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px; 
+}
+
+.showcase-form input[type="text"], 
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
+  font-size: 18px;
+  padding: 3px;
+}
+
+.form-control {
+  margin: 30px 0;
+}
+
+.showcase::before {
+  content: "";
+  height: 100px;
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  transform: skewY(-3deg);
+}
+
+/* Stats */
+
+.stats {
+  padding-top: 100px;
+}
+
+/* CLI */
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 3;
+}
+
+/* cloud */
+
+.lg-text {
+    font-size: 3rem;
+}
+
+.cloud .description {
+  text-align: center;
+  height: 350px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+ .btn-dark {
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    color: #fff;
+    padding: 6px;
+ }
+ 
+/* utilities(class name that we use a couple times) */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 40px;
+  overflow: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin: 10px;
+  color: var(--text-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: var(--light-color)
+}
+
+.btn-outline {
+  background-color: transperent;
+  border: 1px solid #fff;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /*(2columns of 1 fr it devide the page in 2 section 50%/50%)*/
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+
+
+/* animation */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX (0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX (0);
+  }
+}
+
+
+
+/* flex-direction - row
+main-axis => x-axis (horizontal)
+cross-axis => y-axis(vertical)
+
+flex-direction - column
+main-axis => y-axis (vertical)
+cross-axis => x-axis(horizontal) 
+
+justify-content always controls main-axis
+align-items alwasy controls cross axis
+
+so always check your flex-direction first*/
