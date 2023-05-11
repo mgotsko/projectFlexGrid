@@ -91,11 +91,11 @@ img {
 }
 
 .showcase-text {
-/*   animation: slideInFromLeft 1s ease-in;  */
+  animation: slideInFromLeft 1s ease-in; 
 } /* easy-in - starts slowly and then speed up; easy-out - starts fast and then slows down*/
 
 .showcase-form {
-/*   animation: slideInFromRight 1s ease-in;  */
+  animation: slideInFromRight 1s ease-in; 
   position: relative; 
   top: 60px;
   height: 350px;
