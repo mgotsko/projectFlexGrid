@@ -179,6 +179,48 @@ section.cloud {
     grid-template-columns: repeat(7, 1fr);
 }
 
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card:hover {
+  transform: translate(0, -10px);
+}
+
+.languagetext {
+  text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    color: #333;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+}
+
+.footer .social a {
+    margin: 0 10px;
+  
+}
+
+.social a {
+  color: #fff;
+}
 /* utilities(class name that we use a couple times) */
 
 .container {
