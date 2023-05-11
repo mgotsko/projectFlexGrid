@@ -145,6 +145,11 @@ img {
 }
 
 /* cloud */
+section.cloud {
+    height: 350px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
 
 .lg-text {
     font-size: 3rem;
@@ -152,9 +157,6 @@ img {
 
 .cloud .description {
   text-align: center;
-  height: 350px;
-  background-color: var(--primary-color);
-  color: #fff;
 }
 
 .mt-20 {
@@ -170,7 +172,13 @@ img {
     color: #fff;
     padding: 6px;
  }
- 
+
+ /* languages  */
+
+.languages .grid{
+    grid-template-columns: repeat(7, 1fr);
+}
+
 /* utilities(class name that we use a couple times) */
 
 .container {
