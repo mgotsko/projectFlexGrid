@@ -221,6 +221,10 @@ nav a {
 .social a {
   color: #fff;
 }
+
+
+
+
 /* utilities(class name that we use a couple times) */
 
 .container {
@@ -275,10 +279,6 @@ nav a {
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
-
-
-
-
 
 /* animation */
 
